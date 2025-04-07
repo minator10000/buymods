@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Client Form</title>
+  <title>Submit Your Mod</title>
   <style>
     body {
       margin: 0;
@@ -16,11 +16,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      backdrop-filter: brightness(0.8);
     }
 
     .form-container {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
       padding: 2rem;
       border-radius: 10px;
       color: white;
@@ -68,16 +68,16 @@
     <form action="https://formsubmit.co/ivyivvy1@outlook.com" method="POST">
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="modDetails" rows="5" placeholder="Enter your custom mod details..." required></textarea>
-      
+
       <!-- Redirect to thankyou.html after submission -->
       <input type="hidden" name="_next" value="thankyou.html" />
-      
+
       <!-- Anti-spam honeypot -->
       <input type="text" name="_honey" style="display:none" />
-      
+
       <!-- Disable CAPTCHA -->
       <input type="hidden" name="_captcha" value="false" />
-      
+
       <button type="submit">Submit</button>
     </form>
   </div>
