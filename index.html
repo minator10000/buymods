@@ -50,6 +50,39 @@
   <p> note:we only make custom mods for minecraft bedrock and pocket edition.</p>
   <p> Click the button below to get started!</p>
   <a href="form.html" class="btn">Get Started</a>
+  <button class="top-secret-btn" onclick="checkSecret()">Top Secret</button>
+
 </body>
-</html>
+</html><script>
+  function checkSecret() {
+    const code = prompt("Enter the Top Secret Code:");
+    if (code === "banana42") {
+      window.location.href = "https://example.com/supersecret";
+    } else {
+      alert("Access Denied. That’s not the right code.");
+    }
+  }
+</script>
+
+<style>
+  .top-secret-btn {
+    background-color: #111;
+    color: #fff;
+    border: 2px solid red;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px red;
+    margin-top: 20px;
+  }
+
+  .top-secret-btn:hover {
+    background-color: red;
+    color: #000;
+  }
+</style>
+
 
