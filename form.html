@@ -1,10 +1,82 @@
-<form action="https://formspree.io/f/xkgjprvz" method="POST">
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="modDetails" rows="5" placeholder="Enter your custom mod details..." required></textarea>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Your Mod</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url('assets/background#2.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  <!-- Redirect after submission -->
-  <input type="hidden" name="_redirect" value="thankyou.html" />
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 10px;
+      color: white;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
 
-  <button type="submit">Submit</button>
-</form>
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
 
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Submit Your Mod Request</h1>
+    <form action="https://formspree.io/f/xkgjprvz" method="POST">
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="modDetails" rows="5" placeholder="Enter your custom mod details..." required></textarea>
+      <input type="hidden" name="_redirect" value="thankyou.html" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
