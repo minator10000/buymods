@@ -1,1 +1,1 @@
-anyone can get thier mod in a week
+anyone can get their mod in a week
