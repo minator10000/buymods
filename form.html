@@ -12,21 +12,21 @@
       background-image: url('assets/background#2.jpg');
       background-size: cover;
       background-position: center;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .form-container {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(10px);
       padding: 2rem;
       border-radius: 10px;
       color: white;
       width: 90%;
       max-width: 400px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
 
     h1 {
@@ -74,9 +74,13 @@
     <form action="https://formspree.io/f/xkgjprvz" method="POST">
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="modDetails" rows="5" placeholder="Enter your custom mod details..." required></textarea>
-      <input type="hidden" name="_redirect" value="thankyou.html" />
+
+      <!-- Redirect to thankyou.html after submission -->
+      <input type="hidden" name="_redirect" value="/thankyou.html" />
+
       <button type="submit">Submit</button>
     </form>
   </div>
 </body>
 </html>
+
