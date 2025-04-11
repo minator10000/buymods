@@ -11,36 +11,39 @@
       color: white;
       text-align: center;
       padding: 20px;
+      position: relative;
     }
+
+    /* Logo Styling */
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: auto;
+    }
+
     h1 {
+      margin-top: 60px;
       margin-bottom: 20px;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 15px;
       max-width: 1000px;
       margin: auto;
-      padding-bottom: 50px; /* Added padding to the bottom to create more space */
     }
+
     .gallery img {
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(255,255,255,0.2);
     }
-    a.back {
-      display: inline-block;
-      margin-top: 20px;
-      color: #4CAF50;
-      text-decoration: none;
-    }
-    a.back:hover {
-      text-decoration: underline;
-    }
 
-    /* Back to Home Button Styling */
     .Back_to_home {
-      background-color: #C7A100;
+      background-color: #FFD700;
       color: #00FFFF;
       border: 2px solid red;
       padding: 10px 20px;
@@ -50,22 +53,39 @@
       cursor: pointer;
       transition: 0.3s ease;
       box-shadow: 0 0 15px red;
-      margin-top: 60px; /* Increased margin-top further */
+      margin-top: 40px;
+      text-decoration: none;
     }
+
     .Back_to_home:hover {
-      background-color: #FFFB00; /* Adds hover effect */
+      background-color: #FFFF00;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: #888;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Logo in top-right -->
+  <img src="assets/logo.png" alt="Minamod Logo" class="logo">
+
   <h1>Preview of Our Custom Addons so far</h1>
+
   <div class="gallery">
     <img src="assets/addon1.jpg" alt="Addon 1">
     <img src="assets/addon2.jpg" alt="Addon 2">
     <!-- Add more <img> tags for more pictures -->
   </div>
 
-  <!-- Using the Back_to_home class for styling the link as a button -->
   <a href="index.html" class="Back_to_home">← Back to Home</a>
+
+  <div class="disclaimer">
+    This project is not affiliated with, endorsed, or sponsored by Mojang Studios or Microsoft.
+  </div>
+
 </body>
 </html>
