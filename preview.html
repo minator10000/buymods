@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Viewport Meta Tag -->
   <title>Addon Preview</title>
   <style>
     body {
@@ -12,6 +12,7 @@
       text-align: center;
       padding: 20px;
       position: relative;
+      margin: 0;
     }
 
     /* Logo Styling */
@@ -30,17 +31,17 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Makes the gallery responsive */
       gap: 15px;
       max-width: 1000px;
       margin: auto;
-      margin-bottom: 40px; /* Added margin-bottom to fix the overlap */
+      margin-bottom: 40px;
     }
 
     .gallery img {
-      width: 100%;
+      width: 100%; /* Ensures images are responsive */
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
     .Back_to_home {
@@ -66,6 +67,31 @@
       font-size: 12px;
       color: red; /* Changed to red */
       margin-top: 50px;
+    }
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 600px) {
+      .logo {
+        width: 80px; /* Smaller logo for mobile */
+      }
+
+      h1 {
+        font-size: 1.8em; /* Adjust heading size for smaller screens */
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* More compact layout */
+        padding: 10px; /* Adds spacing on mobile devices */
+      }
+
+      .Back_to_home {
+        width: 80%; /* Make the button take up more space on mobile */
+        font-size: 16px;
+      }
+
+      .disclaimer {
+        font-size: 10px; /* Smaller disclaimer for mobile */
+      }
     }
   </style>
 </head>
