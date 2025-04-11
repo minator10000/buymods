@@ -7,7 +7,8 @@
   <style>
     body {
       font-family: sans-serif;
-      background: aqua; /* Changed to aqua */
+      background: url('assets/background.jpg') no-repeat center center fixed; /* Add your image path here */
+      background-size: cover; /* Ensure the image covers the entire screen */
       color: white;
       text-align: center;
       padding: 50px 20px;
@@ -78,13 +79,13 @@
   <img src="assets/logo.png" alt="Minamod Logo" class="logo">
 
   <h1>Welcome to Minamod</h1>
-  <h2 id="subtitle">Your gateway to amazing Minecraft Addons</h2> <!-- Subtitle section -->
+  <h2 id="subtitle">Your gateway to amazing custom Minecraft Addons</h2> <!-- Subtitle section -->
 
   <!-- New H1 Text "Click Below to Get Started" above the Get Started button -->
   <h1 class="clickable-h1">Click Below to Get Started</h1>
 
   <div class="buttons">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDXaSiCsNJVOB_v72xVyNkPi5_Df1kv79e4cSSYWjp46l2mg/viewform?usp=dialog" class="btn btn-green">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDXaSiCsNJVOB_v72xVyNkPi5_Df1kv79e4cSSYWjp46l2mg/viewform?usp=header" class="btn btn-green">Get Started</a>
     <a href="preview.html" class="btn btn-brown">Preview</a>
     <button class="btn btn-red" onclick="adminAccess()">Admin Only</button>
   </div>
@@ -97,7 +98,7 @@
     function adminAccess() {
       const password = prompt("Enter admin password:");
       if (password === "greytiel") {  // <- Set your password here
-        window.location.href = "https://drive.google.com/drive/folders/1AJYvsbmvEYQEnsYZ1QBCuGuqnl3bdqz4?usp=sharing"; // <- Set your admin page URL here
+        window.location.href = "https://drive.google.com/drive/folders/1AJYvsbmvEYQEnsYZ1QBCuGuqnl3bdqz4?usp=drive_link"; // <- Set your admin page URL here
       } else if (password) {
         alert("Access denied.");
       }
