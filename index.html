@@ -7,15 +7,17 @@
   <style>
     body {
       font-family: sans-serif;
-      background: url('assets/background.jpg') no-repeat center center fixed; /* Add your image path here */
-      background-size: cover; /* Ensure the image covers the entire screen */
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
       padding: 50px 20px;
+      margin: 0;
     }
 
     .logo {
       width: 120px;
+      height: auto;
       margin-bottom: 30px;
     }
 
@@ -26,14 +28,13 @@
 
     h2 {
       font-size: 1.5em;
-      color: #555; /* Changed color for better contrast */
+      color: #ccc;
       margin-top: 0;
     }
 
-    /* New H1 for "Click Below" text */
     .clickable-h1 {
       font-size: 2em;
-      color: #ffcc00; /* Yellow for better visibility */
+      color: #ffcc00;
       margin-top: 30px;
     }
 
@@ -69,8 +70,44 @@
 
     .disclaimer {
       font-size: 12px;
-      color: red; /* Changed to red */
+      color: red;
       margin-top: 60px;
+      padding: 0 10px;
+    }
+
+    /* Mobile responsive tweaks */
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 15px;
+      }
+
+      .logo {
+        width: 90px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      .clickable-h1 {
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+
+      .btn {
+        width: 90%;
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+
+      .disclaimer {
+        font-size: 10px;
+      }
     }
   </style>
 </head>
@@ -79,9 +116,8 @@
   <img src="assets/logo.png" alt="Minamod Logo" class="logo">
 
   <h1>Welcome to Minamod</h1>
-  <h2 id="subtitle">Your gateway to amazing custom Minecraft Addons</h2> <!-- Subtitle section -->
+  <h2 id="subtitle">Your gateway to amazing custom Minecraft Addons</h2>
 
-  <!-- New H1 Text "Click Below to Get Started" above the Get Started button -->
   <h1 class="clickable-h1">Click Below to Get Started</h1>
 
   <div class="buttons">
@@ -97,8 +133,8 @@
   <script>
     function adminAccess() {
       const password = prompt("Enter admin password:");
-      if (password === "greytiel") {  // <- Set your password here
-        window.location.href = "https://drive.google.com/drive/folders/1AJYvsbmvEYQEnsYZ1QBCuGuqnl3bdqz4?usp=drive_link"; // <- Set your admin page URL here
+      if (password === "greytiel") {
+        window.location.href = "https://drive.google.com/drive/folders/1AJYvsbmvEYQEnsYZ1QBCuGuqnl3bdqz4?usp=drive_link";
       } else if (password) {
         alert("Access denied.");
       }
