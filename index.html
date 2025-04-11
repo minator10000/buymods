@@ -2,88 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Addon Preview</title>
   <style>
     body {
       font-family: sans-serif;
+      background: #121212;
+      color: white;
       text-align: center;
-      margin: 0;
-      padding: 0;
-      background-image: url('assets/background.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: brightness(0.8);
+      padding: 20px;
+      position: relative;
     }
+
+    /* Logo Styling */
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: auto;
+    }
+
     h1 {
+      margin-top: 60px;
       margin-bottom: 20px;
-      text-shadow: 1px 1px 2px #000;
     }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-      text-shadow: 1px 1px 2px #000;
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 50px;
-      font-size: 1em;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .Back_to_home {
+      background-color: #FFD700;
+      color: #00FFFF;
+      border: 2px solid red;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
       cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px red;
+      margin-top: 40px;
+      text-decoration: none;
     }
-    .btn:hover {
-      background-color: #45a049;
+
+    .Back_to_home:hover {
+      background-color: #FFFF00;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: #888;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-  <h1>get your custom mod now!</h1>
-  <p> note:we only make custom mods for minecraft bedrock and pocket edition.</p>
-  <p> Click the button below to get started!</p>
-  <a href="form.html" class="btn">Get Started</a>
-<a href="preview.html" class="btn" style="margin-top: 15px; background-color: #c68642;">Preview</a>
- <button class="admin-only-btn" onclick="checkSecret()">admin only!</button>
+
+  <!-- Logo in top-right -->
+  <img src="assets/logo.png" alt="Minamod Logo" class="logo">
+
+  <h1>Preview of Our Custom Addons so far</h1>
+
+  <div class="gallery">
+    <img src="assets/addon1.jpg" alt="Addon 1">
+    <img src="assets/addon2.jpg" alt="Addon 2">
+    <!-- Add more <img> tags for more pictures -->
+  </div>
+
+  <a href="index.html" class="Back_to_home">← Back to Home</a>
+
+  <div class="disclaimer">
+    This project is not affiliated with, endorsed, or sponsored by Mojang Studios or Microsoft.
+  </div>
 
 </body>
-</html><script>
-  function checkSecret() {
-    const code = prompt("Enter the Top Secret Code:");
-    if (code === "greytiel") {
-      window.location.href = "https://drive.google.com/drive/folders/1AJYvsbmvEYQEnsYZ1QBCuGuqnl3bdqz4?usp=sharing";
-    } else {
-      alert("Access Denied. That’s not the right code.");
-    }
-  }
-</script>
-
-<style>
-  .admin-only-btn {
-    background-color: #111;
-    color: #fff;
-    border: 2px solid red;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0 0 15px red;
-    margin-top: 20px;
-  }
-
-  .admin-only-btn:hover {
-    background-color: red;
-    color: #000;
-  }
-</style>
-
-
+</html>
