@@ -3,89 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Addon Preview</title>
+  <title>Minamod - Home</title>
   <style>
     body {
       font-family: sans-serif;
-      background: #121212;
+      background: #1e1e1e;
       color: white;
       text-align: center;
-      padding: 20px;
-      position: relative;
+      padding: 50px 20px;
     }
 
-    /* Logo Styling */
     .logo {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 100px;
-      height: auto;
+      width: 120px;
+      margin-bottom: 30px;
     }
 
     h1 {
-      margin-top: 60px;
-      margin-bottom: 20px;
+      font-size: 2.5em;
+      margin-bottom: 30px;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.2);
-    }
-
-    .Back_to_home {
-      background-color: #FFD700;
-      color: #00FFFF;
-      border: 2px solid red;
-      padding: 10px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 0 15px red;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
       margin-top: 40px;
-      text-decoration: none;
     }
 
-    .Back_to_home:hover {
-      background-color: #FFFF00;
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      width: 200px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transition: 0.3s ease;
     }
+
+    .btn-green { background-color: #00AA00; }
+    .btn-green:hover { background-color: #00CC00; }
+
+    .btn-brown { background-color: #b58e69; }
+    .btn-brown:hover { background-color: #d2a77e; }
+
+    .btn-gray { background-color: #555; }
+    .btn-gray:hover { background-color: #777; }
+
+    .btn-red { background-color: #aa0000; }
+    .btn-red:hover { background-color: #cc0000; }
 
     .disclaimer {
       font-size: 12px;
-      color: #888;
-      margin-top: 50px;
+      color: #aaa;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo in top-right -->
   <img src="assets/logo.png" alt="Minamod Logo" class="logo">
 
-  <h1>Preview of Our Custom Addons so far</h1>
+  <h1>Welcome to Minamod</h1>
 
-  <div class="gallery">
-    <img src="assets/addon1.jpg" alt="Addon 1">
-    <img src="assets/addon2.jpg" alt="Addon 2">
-    <!-- Add more <img> tags for more pictures -->
+  <div class="buttons">
+    <a href="https://yoursiteslink.com" class="btn btn-green">Get Started</a> <!-- Replace with your Google Sites link -->
+    <a href="preview.html" class="btn btn-brown">Preview</a>
+    <a href="#" class="btn btn-gray">Contact</a>
+    <button class="btn btn-red" onclick="adminAccess()">Admin Only</button>
   </div>
-
-  <a href="index.html" class="Back_to_home">← Back to Home</a>
 
   <div class="disclaimer">
     This project is not affiliated with, endorsed, or sponsored by Mojang Studios or Microsoft.
   </div>
+
+  <script>
+    function adminAccess() {
+      const password = prompt("Enter admin password:");
+      if (password === "greytiel") {  // <- Set your password here
+        window.location.href = "https://your-admin-link.com"; // <- Set your admin page URL here
+      } else if (password) {
+        alert("Access denied.");
+      }
+    }
+  </script>
 
 </body>
 </html>
