@@ -11,23 +11,20 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin: 0;
+      position: relative;
     }
 
-    /* Flex container for logo */
-    .header {
-      display: flex;
-      justify-content: flex-end;
-      padding: 20px;
-    }
-
+    /* Logo Styling */
     .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
       width: 100px;
       height: auto;
     }
 
     h1 {
-      margin-top: 80px; /* Ensure there's space from the top */
+      margin-top: 60px;
       margin-bottom: 20px;
     }
 
@@ -37,6 +34,7 @@
       gap: 15px;
       max-width: 1000px;
       margin: auto;
+      margin-bottom: 40px; /* Added margin-bottom to fix the overlap */
     }
 
     .gallery img {
@@ -66,17 +64,15 @@
 
     .disclaimer {
       font-size: 12px;
-      color: #888;
+      color: red; /* Changed to red */
       margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo in top-right, inside a flex container -->
-  <div class="header">
-    <img src="assets/logo.png" alt="Minamod Logo" class="logo">
-  </div>
+  <!-- Logo in top-right -->
+  <img src="assets/logo.png" alt="Minamod Logo" class="logo">
 
   <h1>Preview of Our Custom Addons so far</h1>
 
