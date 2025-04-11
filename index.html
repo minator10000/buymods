@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: sans-serif;
-      background: #1e1e1e;
+      background: aqua; /* Changed to aqua */
       color: white;
       text-align: center;
       padding: 50px 20px;
@@ -25,8 +25,15 @@
 
     h2 {
       font-size: 1.5em;
-      color: #aaa;
+      color: #555; /* Changed color for better contrast */
       margin-top: 0;
+    }
+
+    /* New H1 for "Click Below" text */
+    .clickable-h1 {
+      font-size: 2em;
+      color: #ffcc00; /* Yellow for better visibility */
+      margin-top: 30px;
     }
 
     .buttons {
@@ -56,9 +63,6 @@
     .btn-brown { background-color: #b58e69; }
     .btn-brown:hover { background-color: #d2a77e; }
 
-    .btn-gray { background-color: #555; }
-    .btn-gray:hover { background-color: #777; }
-
     .btn-red { background-color: #aa0000; }
     .btn-red:hover { background-color: #cc0000; }
 
@@ -76,10 +80,12 @@
   <h1>Welcome to Minamod</h1>
   <h2 id="subtitle">Your gateway to amazing Minecraft Addons</h2> <!-- Subtitle section -->
 
+  <!-- New H1 Text "Click Below to Get Started" above the Get Started button -->
+  <h1 class="clickable-h1">Click Below to Get Started</h1>
+
   <div class="buttons">
-    <a href="https://yoursiteslink.com" class="btn btn-green">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDXaSiCsNJVOB_v72xVyNkPi5_Df1kv79e4cSSYWjp46l2mg/viewform?usp=dialog" class="btn btn-green">Get Started</a>
     <a href="preview.html" class="btn btn-brown">Preview</a>
-    <a href="#" class="btn btn-gray">Contact</a>
     <button class="btn btn-red" onclick="adminAccess()">Admin Only</button>
   </div>
 
@@ -91,7 +97,7 @@
     function adminAccess() {
       const password = prompt("Enter admin password:");
       if (password === "greytiel") {  // <- Set your password here
-        window.location.href = "https://your-admin-link.com"; // <- Set your admin page URL here
+        window.location.href = "https://drive.google.com/drive/folders/1AJYvsbmvEYQEnsYZ1QBCuGuqnl3bdqz4?usp=sharing"; // <- Set your admin page URL here
       } else if (password) {
         alert("Access denied.");
       }
