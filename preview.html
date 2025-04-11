@@ -36,16 +36,35 @@
     a.back:hover {
       text-decoration: underline;
     }
+
+    /* Back to Home Button Styling */
+    .Back_to_home {
+      background-color: #111;
+      color: #fff;
+      border: 2px solid red;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px red;
+      margin-top: 20px;
+    }
+    .Back_to_home:hover {
+      background-color: #333; /* Adds hover effect */
+    }
   </style>
 </head>
 <body>
-  <h1>Preview of Our Custom Addons
-            so far</h1>
+  <h1>Preview of Our Custom Addons so far</h1>
   <div class="gallery">
     <img src="assets/addon1.jpg" alt="Addon 1">
     <img src="assets/addon2.jpg" alt="Addon 2">
     <!-- Add more <img> tags for more pictures -->
   </div>
-  <a href="index.html" class="back">← Back to Home</a>
+
+  <!-- Using the Back_to_home class for styling the link as a button -->
+  <a href="index.html" class="Back_to_home">← Back to Home</a>
 </body>
 </html>
