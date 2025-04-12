@@ -65,8 +65,20 @@
     .btn-brown { background-color: #b58e69; }
     .btn-brown:hover { background-color: #d2a77e; }
 
-    .btn-red { background-color: #aa0000; }
-    .btn-red:hover { background-color: #cc0000; }
+    .btn-red {
+      background-color: #000000;
+    }
+    .btn-red:hover {
+      background-color: #cc0000;
+    }
+
+    .btn-grey {
+      background-color: lightgrey;
+      color: black;
+    }
+    .btn-grey:hover {
+      background-color: #dcdcdc;
+    }
 
     .disclaimer {
       font-size: 12px;
@@ -75,7 +87,6 @@
       padding: 0 10px;
     }
 
-    /* Mobile responsive tweaks */
     @media (max-width: 600px) {
       body {
         padding: 30px 15px;
@@ -124,6 +135,7 @@
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDXaSiCsNJVOB_v72xVyNkPi5_Df1kv79e4cSSYWjp46l2mg/viewform?usp=header" class="btn btn-green">Get Started</a>
     <a href="preview.html" class="btn btn-brown">Preview</a>
     <button class="btn btn-red" onclick="adminAccess()">Admin Only</button>
+    <a href="https://example.com/contact" class="btn btn-grey">Contact</a> <!-- Replace with your contact link -->
   </div>
 
   <div class="disclaimer">
